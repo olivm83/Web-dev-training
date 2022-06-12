@@ -1,0 +1,169 @@
+body {
+    font-family: Roboto Mono, monospace;
+    background-color: #293241;
+    color:#293241;
+    margin: 0;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+    position: fixed;
+}
+
+header h1 {
+    text-align: center ;
+    color: #e0fbfc;
+    margin: auto 0.5em;
+}
+
+footer a, nav a {
+    color: #e0fbfc;
+    text-decoration: none;
+    padding: 3px 6px;
+    border-radius: 0.3em;
+}
+
+footer a:hover, nav a:hover {
+    color: #ee6c4d;
+    background-color: #e0fbfc;
+    padding: 3px 6px;
+    border-radius: 0.3em;
+}
+
+header, footer {
+    background-color: #ee6c4d;
+}
+
+img#logo {
+    width: max(100px, 18vw);
+    padding: 0.4em;
+    background-color: black;
+}
+
+nav ul{
+    padding-right: 10px;
+}
+
+header li:last-of-type{
+    margin-right: 0;
+}
+header li {
+    display: inline-block;
+    padding: 0.4em 0.8em;
+    margin: 0 -0.3em;
+}
+main {
+    background-color: #e0fbfc;
+    max-width: 60%;
+    margin: 0 auto;
+    padding: 1em;
+    padding-top: 5.2em;
+}
+
+.info label, .info input {
+    display: inline-block;
+    padding: 2px;
+    margin: 2px 0;
+}
+
+.info input {
+    text-align: left;
+    width: 60%;
+}
+
+.info label {
+    text-align: right;
+    width: 10%;
+}
+
+nav li, fieldset li {
+    list-style: none;
+}
+
+fieldset {
+    border: none;
+}
+
+fieldset li>label, fieldset li input {
+    cursor: pointer;
+}
+
+h2 {
+    border-bottom: 4px dashed #ee6c4d;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+p::before {
+    content: "Question #";
+}
+
+p {
+    font-size: larger;
+    font-weight: 800;
+    margin: 0.2em 0;
+}
+
+textarea, select {
+    display: block;
+    margin: 3px 0 10px 0;
+}
+
+button {
+    padding: 15px 15px;
+    margin: 20px auto;
+    display: block;
+    width: 40%;
+    font-size: 23px;
+    border: 15px solid #293241;
+    border-radius: 0.3em;
+}
+
+button:hover {
+    background-color: #293241aa;
+    border: 15px solid #293241aa;
+    color: #e0fbfc;
+    cursor: pointer;
+}
+
+/*FOOTER*/
+
+address {
+    text-align: center;
+    padding: 10px;
+    line-height: 1.5em;
+}
+
+@media (max-width:670px) {
+    nav li{
+        display: block;
+        width: 2em;
+    }
+    
+    main {
+        max-width: 100%;
+        padding-top: 8em;
+        min-width: 250x;
+    }
+}
+
+@media (max-width: 300px) {
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav li{
+        display: inline;
+        width: 2em;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+}

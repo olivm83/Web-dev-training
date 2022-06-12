@@ -1,0 +1,77 @@
+html{
+    font-size: 16px;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.nutrifact {
+    width: 270px;
+    margin: auto;
+    border: 2px solid black;
+    padding: 0 7px;
+}
+
+.right {
+    float: right;
+}
+
+header h1{
+    font-weight: 800;
+    letter-spacing: 0.15px;
+    text-align: center;
+    margin: -5px 0;
+}
+
+.calory span {
+    font-size: 1.2em;
+    margin-top: -7px;
+}
+
+.calory h1 {
+    margin: -5px -2px;
+}
+
+.rule {
+    border-bottom: 1px solid #000;
+    margin: 2px 0;
+    clear: right;
+}
+.thin {
+    border-bottom: 5px solid #000;
+}
+
+.thick {
+    border-bottom: 10px solid #000;
+}
+
+.bold {
+    font-weight: 800;
+}
+
+p {
+    margin: 0;
+    font-size: 0.85rem;
+}
+
+p.indent {
+    text-indent: 14px ;
+}
+
+.two-indent {
+    margin-left: 28px ;
+}
+
+div>p:last-child {
+    font-size: 0.6rem;
+    margin: 5px 0;
+    text-indent: -8px;
+}
+
+header>p {
+    font-size: 1rem;
+}

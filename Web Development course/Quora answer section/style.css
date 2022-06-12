@@ -1,0 +1,64 @@
+body{
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    color: #282829;
+    font-size: 15px;
+}
+
+header, header h1, div span {
+    font-size: 13px;
+}
+
+header {
+    display: flex;
+
+}
+
+#info {
+    box-sizing: border-box;
+    margin-top: -1px;
+}
+
+header div span {
+    color: #636466;
+}
+header h1 {
+    margin: 0;
+}
+
+section {
+    padding: 16px 16px 0;
+    border: 1px solid lightgrey;
+    width: 656px;
+    height: auto;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+img {
+    border-radius: 50%;
+    border: 0.5px solid lightgrey;
+    width: 36px;
+    height: auto;
+    margin-right: 8px;
+}
+
+li {
+    padding-bottom: 10.5px;
+}
+
+ol>li li {
+    padding-bottom: 0;
+    padding-top: 10.5px;
+}
+div .upvote::before, .xp-year::before {
+    content: " · ";
+}
+
+#views {
+    margin-top: 8px;
+    color: #939598;
+}
+
+section p:last-of-type {
+    margin-bottom: 0;
+}
