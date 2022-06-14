@@ -1,0 +1,42 @@
+body {
+    font-family: Verdana ,sans-serif;
+  }
+  
+  header{
+    width:fit-content;
+    background-color: #edede9;
+    text-align: center;
+    padding:10px 10px;
+  }
+  
+  #main {
+    max-width: 80%;
+    background-color: #d6ccc2;
+    padding: 25px;
+  }
+  
+  #image {
+    display: block;
+    max-width: 100%;
+    height:auto;
+  }
+  
+  header, #main,#image {
+  margin: 0 auto;
+  }
+  
+  figcaption {
+    margin-top: 10px;
+  }
+  
+  p{
+    text-indent: 5%;
+  }
+  
+  a{
+    color: #f5ebe0;
+    background-color: #d5bdaf;
+    padding: 5px 10px;
+    border-radius: 0.5em;
+    text-decoration: none;
+  }
