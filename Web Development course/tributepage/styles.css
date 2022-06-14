@@ -10,14 +10,14 @@ body {
   }
   
   #main {
-    max-width: 80%;
     background-color: #d6ccc2;
     padding: 25px;
+    min-width: 100vw;
   }
   
   #image {
     display: block;
-    max-width: 100%;
+    max-width: 500px;
     height:auto;
   }
   
@@ -39,4 +39,10 @@ body {
     padding: 5px 10px;
     border-radius: 0.5em;
     text-decoration: none;
+  }
+
+  @media (min-width:600px){
+    #main {
+      width: 80%;
+    }
   }
