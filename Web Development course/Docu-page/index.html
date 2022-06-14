@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" conntent="width=device-width, initial-scale=1.0">
+<title>Not Technical Documentation Page</title>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav id="navbar">
+        <header>CSS Flexbox</header>
+        <ul>
+            <li><a class="nav-link" href="#the_flex_model">The flex model</a></li>
+            <li><a class="nav-link" href="#columns_or_rows">Columns or rows</a></li>
+            <li><a class="nav-link" href="#wrapping">Wrapping</a></li>
+            <li><a class="nav-link" href="#flex-flow_shorthand">flex-flow shorthand</a></li>
+            <li><a class="nav-link" href="#flexible_sizing_of_flex_items">Flexible sizing of flex items</a></li>
+            <li><a class="nav-link" href="#ordering_flex_items">Ordering flex items</a></li>
+        </ul>
+    </nav>
+<main id="main-doc">
+    <section class="main-section" id="the_flex_model">
+        <header>The flex model</header>
+        <p>When elements are laid out as flex items, they are laid out along two axes:</p>
+        <ul>
+        <li><p>The main axis is the axis running in the direction the flex items are laid out in (for example, as rows across the page, or columns down the page.) The start and end of this axis are called the main start and main end.</p></li>
+        <li><p>The cross axis is the axis running perpendicular to the direction the flex items are laid out in. The start and end of this axis are called the cross start and cross end.</p></li>
+        <li><p>The parent element that has <code>display: flex</code> set on it (the <section> in our example) is called the flex container.</p></li>
+                <li><p>The items laid out as flexible boxes inside the flex container are called flex items (the <article> elements in our example).</p></li>
+        </ul>
+    </section>
+
+    <section class="main-section" id="columns_or_rows">
+        <header>Columns or Rows</header>
+        <p>Flexbox provides a property called flex-direction that specifies which direction the main axis runs (which direction the flexbox children are laid out in). By default this is set to row, which causes them to be laid out in a row in the direction your browser's default language works in (left to right, in the case of an English browser).</p>
+        <span>Note: You can also lay out flex items in a reverse direction using the <code>row-reverse</code> and <code>column-reverse</code> values.</span>
+    </section>
+
+    <section class="main-section" id="wrapping">
+        <header>Wrapping</header>
+        <p>One issue that arises when you have a fixed width or height in your layout is that eventually your flexbox children will overflow their container, breaking the layout. Have a look at our flexbox-wrap0.html example and try viewing it live (take a local copy of this file now if you want to follow along with this example):</p>
+        <p>Here we see that the children are indeed breaking out of their container. One way in which you can fix this is to add the following declaration to your <code>section</code> rule:
+        <span><code>flex-wrap: wrap;</code></span>
+        Also, add the following declaration to your <code>article</code> rule:
+        <span><code>flex: 200px;</code></span>
+        </p>
+    </section>
+
+    <section class="main-section" id="flex-flow_shorthand">
+        <header>flex-flow shorthand</header>
+        <p>At this point it's worth noting that a shorthand exists for <code>flex-direction</code> and <code>flex-wrap: flex-flow</code>. So, for example, you can replace
+        <span><code>flex-direction: row;
+        <br>flex-wrap: wrap;</code></span>
+        with
+        <span><code>flex-flow: row wrap;</span></code>
+        </p>
+    </section>
+
+    <section class="main-section" id="flexible_sizing_of_flex_items">
+        <header>Flexible sizing of flex items</header>
+        <p>First, add the following rule to the bottom of your CSS:
+        <span><code>article {<br>
+        flex: 1;<br>
+        }</code></span>
+        </p>
+        <p>This is a unitless proportion value that dictates how much available space along the main axis each flex item will take up compared to other flex items. In this case, we're giving each <code>article</code> element the same value (a value of 1), which means they'll all take up an equal amount of the spare space left after properties like padding and margin have been set. This value is proportionally shared among the flex items: giving each flex item a value of 400000 would have exactly the same effect.</p>
+        <p>Now add the following rule below the previous one:
+        <span><code>article:nth-of-type(3) {<br>
+        flex: 2;<br>
+        }</code></span>
+        </p>
+        <p>There are now four proportion units available in total (since 1 + 1 + 2 = 4). The first two flex items have one unit each, so they each take 1/4 of the available space. The third one has two units, so it takes up 2/4 of the available space (or one-half).</p>
+    </section>
+
+    <section class="main-section" id="ordering_flex_items">
+        <header>Ordering flex items</header>
+        <p>Flexbox also has a feature for changing the layout order of flex items without affecting the source order.</p>
+        <ul>
+            <li>By default, all flex items have an order value of 0.</li>
+            <li>Flex items with higher specified order values will appear later in the display order than items with lower order values.</li>
+            <li>Flex items with the same order value will appear in their source order. So if you have four items whose order values have been set as 2, 1, 1, and 0 respectively, their display order would be 4th, 2nd, 3rd, then 1st.</li>  
+            <li>The 3rd item appears after the 2nd because it has the same order value and is after it in the source order.</li>
+        </ul>
+        <p>You can set negative order values to make items appear earlier than items whose value is 0. For example, you could make the "Blush" button appear at the start of the main axis using the following rule:
+        <span><code>button:last-child {<br>
+              order: -1;<br>
+            }</code></span>
+        </p>
+    </section>
+</main>
+</body>
+</html>
